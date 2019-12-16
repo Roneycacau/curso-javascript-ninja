@@ -42,13 +42,24 @@ seguintes propriedades (os valores devem ser do tipo mostrado abaixo):
 - `assentos` - Number - cinco por padrão
 - `quantidadePessoas` - Number - zero por padrão
 */
-?
+let carro = {
+    marca:'auela',
+    modelo: 's2',
+    placa: 'aaw2314',
+    ano: 2042,
+    cor: 'cinza',
+    quantasPortas: 1,
+    assentos:5,
+    quantidadePessoas: 0
+}
 
 /*
 Crie um método chamado `mudarCor` que mude a cor do carro conforme a cor
 passado por parâmetro.
 */
-?
+carro.mudaCor = function(cor){
+    this.cor = cor;
+}
 
 /*
 Crie um método chamado `obterCor`, que retorne a cor do carro.
@@ -58,19 +69,25 @@ Crie um método chamado `obterCor`, que retorne a cor do carro.
 /*
 Crie um método chamado `obterModelo` que retorne o modelo do carro.
 */
-?
+carro.obterCor = function() {
+  console.log(this.cor);
+};
 
 /*
 Crie um método chamado `obterMarca` que retorne a marca do carro.
 */
-?
+carro.obterMarca = function() {
+  console.log(this.marca);
+};
 
 /*
 Crie um método chamado `obterMarcaModelo`, que retorne:
 "Esse carro é um [MARCA] [MODELO]"
 Para retornar os valores de marca e modelo, utilize os métodos criados.
 */
-?
+carro.obterMarcaModelo = function() {
+  console.log("Esse carro é um " + this.marca + " " + this.modelo);
+};
 
 /*
 Crie um método que irá adicionar pessoas no carro. Esse método terá as
@@ -98,38 +115,50 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.obterCor();
+
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudaCor("vermelho");
+
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor();
+
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudaCor("verde musgo");
+
 
 // E agora, qual a cor do carro?
-?
+carro.obterCor();
+
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarcaModelo();
+
 
 // Adicione 2 pessoas no carro.
-?
+carro.obterMarcaModelo();
+
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarPessoas(2);
+
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas(3);
+
 
 // Tire 4 pessoas do carro.
-?
+carro.removerPessas(4);
+
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10);
+
 
 // Quantas pessoas temos no carro?
-?
+console.log(carro.quantidadePessoas);
+
 ```
